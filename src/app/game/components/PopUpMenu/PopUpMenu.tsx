@@ -5,6 +5,7 @@ interface MenuProps {
   onContinue: () => void;
   onRestart: () => void;
   onQuit: () => void;
+  onClose: () => void; 
 }
 
 const PopUpMenu: React.FC<MenuProps> = ({ onContinue, onRestart, onQuit }) => {

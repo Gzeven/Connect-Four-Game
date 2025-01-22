@@ -5,7 +5,8 @@ export const MenuContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  /* height: 100vh; */
+  overflow-y: auto;
   /* gap: 1.25rem; */
   gap: 1.5rem;
   width: 100vw;

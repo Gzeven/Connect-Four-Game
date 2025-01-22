@@ -8,13 +8,10 @@ export const MenuContainer = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
-  /* height: 100vh; */
   gap: 30px;
   padding: 0 20px;
   background-color: ${({ theme }) => theme.colors.purple};
-  /* max-width: 480px; */
-  /* max-height: 530px; */
-  /* margin: auto; */
+
   @media (min-width: 760px) {
     border: 3px solid ${({ theme }) => theme.colors.black};
     box-shadow: 0px 3px 0px ${({ theme }) => theme.colors.black};

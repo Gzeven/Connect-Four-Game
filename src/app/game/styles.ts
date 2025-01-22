@@ -7,7 +7,8 @@ export const GameContainer = styled.div`
   align-items: center;
   /* padding: 20px; */
 
-  height: 100vh;
+  min-height: 100vh;
+  overflow-y: auto;
   background-color: ${({ theme }) => theme.colors.purple};
   width: 100%;
 `;
@@ -32,6 +33,6 @@ export const GameContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
+  width: 100%;
 `;
 

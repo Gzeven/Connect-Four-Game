@@ -122,8 +122,6 @@ const Board: React.FC<BoardProps> = ({ board, dropCoin, winningCells, currentWin
                       : cell === 'red'
                       ? `url('/assets/images/counter-red-small.svg')`
                       : 'none',
-                    backgroundSize: 'contain',
-                    backgroundRepeat: 'no-repeat',
                   } as React.CSSProperties}
                 >
                   {isWinningCell && currentWinningIndex !== null && winningCells.findIndex(([r, c]) => r === rowIndex && c === columnIndex) <= currentWinningIndex && (

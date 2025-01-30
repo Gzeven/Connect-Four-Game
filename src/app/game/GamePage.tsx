@@ -317,7 +317,9 @@ useEffect(() => {
   
   
 />
-<CurrentPlayerDisplay
+
+      </GameContent>
+      <CurrentPlayerDisplay
   currentPlayer={currentPlayer}
   timeLeft={timeLeft}
   gameOver={gameOver}
@@ -326,7 +328,6 @@ useEffect(() => {
   isCPU={mode === "vsCPU"}
 
 />
-      </GameContent>
     </GameContainer>
   );
 } 

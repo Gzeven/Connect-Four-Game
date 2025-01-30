@@ -5,12 +5,10 @@ export const RulesContainer = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  height: auto;
   background-color: ${({ theme }) => theme.colors.purple}; 
-  padding: 0 1.25rem; 
-  width: 100%;
-  @media (min-width: 760px) {
-   
-  }
+  padding: 4rem 1.25rem; 
+
 `;
 
 export const RulesBox = styled.div`
@@ -31,28 +29,21 @@ export const Title = styled.h1`
   font-size: 3.5rem;
   text-align: center;
   text-transform:uppercase;
-  margin: 0;
-
+  margin-bottom: -1rem;
 `;
 
 export const SectionTitle = styled.h2`
-margin: 0;
   font-weight: 700;
   font-size: 1.25rem;
   color: ${({ theme }) => theme.colors.purple};
-  margin: 2rem 0 1rem;
+  padding: 2rem 0 1rem;
   text-transform:uppercase;
-`;
-
-export const Text = styled.p`
-  color: ${({ theme }) => theme.colors.black};
 `;
 
 export const Rule = styled.div`
   display: flex;
   align-items: flex-start;
-  gap: 17px; 
-  margin-bottom: 0.625rem; 
+  gap: 1.1875rem; 
 `;
 
 export const RuleNumber = styled.span`
@@ -64,7 +55,7 @@ export const RuleNumber = styled.span`
 export const RuleText = styled.span`
   font-size: 1rem;
   color: ${({ theme }) => theme.colors.black};
-  opacity: 0.66;
+  opacity: 0.9;
 `;
 
 interface ButtonProps {
@@ -73,27 +64,14 @@ interface ButtonProps {
   $textColor?: string;
 }
 
-// Check Button Styles
 export const CheckButton = styled.button<ButtonProps>`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
-  bottom: -40px; 
+  bottom: -45px; 
   left: 50%;
   transform: translateX(-50%); 
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-
- 
-
-  svg circle:first-of-type {
-    fill: ${({ theme }) => theme.colors.black};
-  }
 
   svg circle:nth-of-type(2) {
-    fill: ${({ theme }) => theme.colors.black};
+    transition: all 0.6s ease;
   }
 
   &:hover {

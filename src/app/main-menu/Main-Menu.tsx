@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { MenuContainer, Logo, Button,DifficultyOverlay, DifficultyModal, DifficultyButton, CancelButton } from './styles';
+import { MenuWrapper, MenuContainer, Logo,ButtonContainer, Button,DifficultyOverlay, DifficultyModal, DifficultyButton, CancelButton } from './styles';
 import playerVsPlayerIcon from '../../../public/assets/images/player-vs-player.svg';
 import playerVsCpuIcon from '../../../public/assets/images/player-vs-cpu.svg';
 import logo from '../../../public/assets/images/logo.svg';
@@ -20,11 +20,13 @@ export default function MainMenu() {
   };
 
   return (
+    <MenuWrapper>
     <MenuContainer>
+    
       <Logo>
         <Image src={logo} alt="Connect Four Logo" />
       </Logo>
-  
+      <ButtonContainer>
       <Button
         $bgColor="red"
         $hoverColor="darkPurple"
@@ -43,6 +45,7 @@ export default function MainMenu() {
       <Button $bgColor="white" $hoverColor="darkPurple" onClick={() => router.push('/rules')}>
         <span>GAME RULES</span>
       </Button>
+      </ButtonContainer>
    
 {showDifficultyModal && (
         <>
@@ -64,6 +67,8 @@ export default function MainMenu() {
           </DifficultyModal>
         </>
       )}
+     
     </MenuContainer>
+    </MenuWrapper>
   );
 }

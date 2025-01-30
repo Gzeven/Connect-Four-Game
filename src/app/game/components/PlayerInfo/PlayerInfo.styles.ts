@@ -1,36 +1,35 @@
 import styled from 'styled-components';
 
-export const PlayerBoxInfoContainer = styled.div`
+export const PlayerContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  p {
-    font-weight: 700;
-    font-size: 16px;
-    text-transform: uppercase;
-    margin: 0;
-  }
-
-  span {
-    font-weight: 700;
-    font-size: 32px;
-  }
+  justify-content: space-between;
+  /* margin-bottom: 20px; */
+  /* width: 80.8%; */
+  /* width: 310px; */
+  padding-inline: 2rem;
+  padding-bottom: 2rem;
+  /* max-width: 39.5rem; */
+  /* margin: 0 auto; */
 
   @media (min-width: 768px) {
-    flex-direction: row; /* Arrange content horizontally */
-    justify-content: space-between;
+    /* width: 585px; */
+    max-width: 40.625rem;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    /* padding-inline: 0; */
+  }
 
-    p {
-      font-size: 20px;
-      margin: 0 8px; /* Add some spacing */
-    }
-    span {
-      font-size: 56px;
-      margin: 0 8px;
-    }
+  @media (min-width: 1200px) {
+      display: flex;
+  justify-content: space-between; 
+  position: absolute; 
+  top: 424px; 
+  transform: translateY(-50%); 
+  width: 100vw; 
+  /* gap: 40px;  */
   }
 `;
+
 
 export const PlayerBox = styled.div`
   display: flex;
@@ -38,24 +37,28 @@ export const PlayerBox = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 142px;
-  height: 81px;
+  width: 8.875rem;
+  height: 5.0625rem;
+  background-color: ${({ theme }) => theme.colors.white};
   border: 3px solid ${({ theme }) => theme.colors.black};
   box-shadow: 0px 10px 0px ${({ theme }) => theme.colors.black};
-  border-radius: 20px;
-  background-color: white;
-  text-align: center;
+  border-radius: 1.25rem;
+
+ 
+  /* text-align: center; */
 
   p {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1rem;
     text-transform: uppercase;
-    margin: 0;
+    /* margin: 0; */
   }
 
   span {
     font-weight: 700;
-    font-size: 32px;
+    font-size: 2rem;
+    line-height: 1;
+  
   }
 
   .player-image {
@@ -65,119 +68,79 @@ export const PlayerBox = styled.div`
   }
 
   &.player1 .player-image {
-    left: -32px;
+    left: -28px;
   }
 
   &.player2 .player-image {
-    right: -32px;
+    right: -28px;
   }
 
   @media (min-width: 768px) {
-    width: 272px;
-    height: 100px;
-    flex-direction: row; /* Arrange content horizontally */
-    justify-content: center;
+    /* width: 272px; */
+    width: 17rem;
+    gap: 3rem;
+    /* height: 100px; */
+    height: 6.25rem;
+    flex-direction: row; 
+    /* justify-content: center; */
+    
 
     p {
     
-    font-size: 20px;
+    font-size: 1.25rem;
    
   }
 
   span {
-    font-size: 56px;
+    font-size: 3.5rem;
   }
 
-    &.player1 ${PlayerBoxInfoContainer} {
-      flex-direction: row; /* Name first, then score */
-      gap: 3rem;
-    
-    }
-
-    &.player2 ${PlayerBoxInfoContainer} {
-      flex-direction: row;
-      gap: 3rem;
-   
-    }
-
+ 
     &.player2 p {
-      order: 2; /* Place name after score */
+      order: 2; 
     }
 
     &.player2 span {
-      order: 1; /* Place score before name */
+      order: 1; 
     }
   }
 
     @media (min-width: 1200px) {
-    width: 141px;
-    height: 160px;
+    /* width: 141px; */
+    /* height: 160px; */
 
 
     .player-image {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    /* position: absolute; */
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
   }
 
   &.player1 .player-image {
-    left: 42px;
-    top: -0px;
+    /* left: 42px; */
+    /* top: -0px; */
   }
 
   &.player2 .player-image {
-    right: 42px;
-    top: 0px;
+    /* right: 42px; */
+    /* top: 0px; */
   }
 
-  &.player1 ${PlayerBoxInfoContainer} {
-      flex-direction: column; 
-      align-items: center;
-      justify-content: center;
-      gap: 0rem;
-    
-    }
-
-    &.player2 ${PlayerBoxInfoContainer} {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0rem;
-   
-    }
-
     p {
-      padding-top: 2rem;
+      /* padding-top: 2rem; */
     }
 
     &.player2 p {
-      order: 1; 
+      /* order: 1;  */
     }
 
     &.player2 span {
-      order: 2; 
+      /* order: 2;  */
     }
   }
 `;
 
-export const PlayerContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  width: 80.8%;
-  width: 310px;
 
-  @media (min-width: 768px) {
-    width: 585px;
-  }
 
-  @media (min-width: 1200px) {
-      display: flex;
-  justify-content: space-between; 
-  position: absolute; 
-  top: 50%; 
-  transform: translateY(-50%); 
-  width: 1034px; 
-  gap: 40px; 
-  }
-`;
+
+

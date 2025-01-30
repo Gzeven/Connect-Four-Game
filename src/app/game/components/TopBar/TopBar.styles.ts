@@ -4,37 +4,47 @@ export const TopBarContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 89.33%;
-  width: calc(100% - 2.5rem); 
-  padding: 3.125rem 0;
-  max-width: 632px;
+  padding: 3.125rem 1.25rem;
+  max-width: 39.5rem;
+  margin: 0 auto;
+  position: relative;
+
+  & > img {
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+  }
+
   @media (min-width: 768px) {
-    width: calc(100% - 8.375rem); 
-    padding: 2rem 0;  
+    margin: 0 auto;
+    padding: 2rem 0;
+
   }
   @media (min-width: 1200px) {
-    padding: 3.5rem 0; 
+    padding: 3.25rem 0;
   }
 `;
 
-export const Logo = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  width: 40px;
-`;
 
 export const Button = styled.button`
   background-color: ${({ theme }) => theme.colors.darkPurple};
   color: ${({ theme }) => theme.colors.white};
-  border: none;
-  border-radius: 20px;
-  width: 108px;
-  height: 40px;
+  border-radius: 1.25rem;
+  width: 6.75rem;
+  height: 2.5rem;
   font-weight: 700;
-  font-size: 16px;
   text-transform: uppercase;
   cursor: pointer;
- 
+  transition: all 0.6s ease;
+
+  &:hover { 
+   background-color: ${({ theme }) => theme.colors.red};
+
+}
+
+@media (min-width: 768px) {
+  width: auto;
+  padding-inline: 1.28125rem
+  }
+
 `;

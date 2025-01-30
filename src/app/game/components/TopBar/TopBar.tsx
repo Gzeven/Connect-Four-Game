@@ -1,5 +1,5 @@
 import React from 'react';
-import { TopBarContainer, Logo, Button } from './TopBar.styles';
+import { TopBarContainer, Button } from './TopBar.styles';
 import Image from 'next/image'; // Assuming you're using next/image for the logo
 import PopUpMenu from '../PopUpMenu/PopUpMenu';
 import logo from '../../../../../public/assets/images/logo.svg'; // Adjust this path based on your folder structure
@@ -32,9 +32,7 @@ const TopBar: React.FC<TopBarProps> = ({
         />
       )}
 
-      <Logo>
-        <Image src={logo} alt="Game Logo" />
-      </Logo>
+<Image src={logo} alt="Game Logo" />
 
       <Button onClick={handleRestart}>Restart</Button>
     </TopBarContainer>

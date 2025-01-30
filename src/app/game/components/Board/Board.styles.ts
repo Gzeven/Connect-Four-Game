@@ -35,30 +35,37 @@ export const BoardContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
-  width: 335px;
+  /* margin: 20px 0; */
+  width: 330px;
   height: 310px;
+  margin: 0 auto;
 
   @media (min-width: 768px) {
     width: 632px;
     height: 584px;
-    margin: 0;
+    /* margin: 0; */
   }
 
   .board-row {
     display: flex;
+    justify-content: center;
   }
 
   .board-cell {
-    width: 44px;
-    aspect-ratio: 1 / 1.06;
-    margin: 0 1.25px;
+    width: 46px;
+    /* height: 47px; */
+    aspect-ratio: 1 / 1;
+    /* margin: 0 1.25px; */
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     position: relative;
-    background-color: transparent;
+    /* background-color: transparent; */
+    /* margin: 0 auto; */
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 
     &.dropping {
       animation: ${dropAnimationSmall} 0.7s ease-out forwards;
@@ -70,8 +77,8 @@ export const BoardContainer = styled.div`
 
     @media (min-width: 768px) {
       width: 88px;
-      aspect-ratio: 1 / 1;
-      margin: 0;
+      /* aspect-ratio: 1 / 1; */
+      /* margin: 0; */
     }
   }
 
@@ -81,8 +88,8 @@ export const BoardContainer = styled.div`
     left: 50%;
     border: 6px solid white;
     transform: translate(-50%, -50%);
-    width: 8px;
-    height: 8px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-color: transparent;
     z-index: 1;
@@ -90,42 +97,56 @@ export const BoardContainer = styled.div`
 
     @media (min-width: 768px) {
       border: 6px solid white;
-      width: 20px;
-      height: 20px;
+      width: 36px;
+      height: 36px;
     }
   }
 
   .black-board {
+    /* display: none; */
     position: absolute;
-    top: 10px;
+    top: 12px;
     z-index: 1;
+    @media (min-width: 768px) {
+   
+  top: 20px;
+
+  }
   }
 
   .white-board {
+    /* display: none; */
     position: absolute;
-    top: 10px;
+    top: 12px;
     z-index: 3;
     pointer-events: none;
+    @media (min-width: 768px) {
+   
+  top: 20px;
+
+  }
   }
 
   .game-grid {
-    position: relative;
-    position: absolute;
+    /* position: relative; */
+    /* position: absolute; */
 
     z-index: 2;
     @media (min-width: 768px) {
-      top: 16px;
+   
+  
+
     }
   }
 
   .marker-container {
     @media (min-width: 1200px) {
-    position: absolute;
-    top: -25px; /* Position above the board */
-    height: 40px;
-    width: auto;
-    pointer-events: none;
-    z-index: 5;
+    /* position: absolute; */
+    /* top: -25px;  */
+    /* height: 40px; */
+    /* width: auto; */
+    /* pointer-events: none; */
+    /* z-index: 5; */
     }
   }
 
@@ -134,9 +155,9 @@ export const BoardContainer = styled.div`
  
 
     @media (min-width: 1200px) {
-      pointer-events: none;
-      position: absolute;
-      transition: left 0.2s ease-in-out;
+      /* pointer-events: none; */
+      /* position: absolute; */
+      /* transition: left 0.2s ease-in-out; */
     }
   }
 

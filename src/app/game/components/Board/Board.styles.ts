@@ -17,7 +17,7 @@ const dropAnimationSmall = keyframes`
 
 const dropAnimationLarge = keyframes`
   0% {
-    transform: translateY(calc(var(--drop-distance, 0) * -2.2)); /* Adjusted multiplier for larger screens */
+    transform: translateY(calc(var(--drop-distance, 0) * -2.2)); 
   }
   60% {
     transform: translateY(10%);
@@ -35,15 +35,12 @@ export const BoardContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin: 20px 0; */
-  width: 330px;
+  width: 335px;
   height: 310px;
-  margin: 0 auto;
 
   @media (min-width: 768px) {
     width: 632px;
     height: 584px;
-    /* margin: 0; */
   }
 
   .board-row {
@@ -52,17 +49,10 @@ export const BoardContainer = styled.div`
   }
 
   .board-cell {
-    width: 46px;
-    /* height: 47px; */
+    width: 46.6px;
     aspect-ratio: 1 / 1;
-    /* margin: 0 1.25px; */
     cursor: pointer;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
     position: relative;
-    /* background-color: transparent; */
-    /* margin: 0 auto; */
     background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -75,10 +65,8 @@ export const BoardContainer = styled.div`
       }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 768px) {   
       width: 88px;
-      /* aspect-ratio: 1 / 1; */
-      /* margin: 0; */
     }
   }
 
@@ -103,61 +91,49 @@ export const BoardContainer = styled.div`
   }
 
   .black-board {
-    /* display: none; */
     position: absolute;
-    top: 12px;
+    top: 10px;
     z-index: 1;
     @media (min-width: 768px) {
    
-  top: 20px;
+  top: 18px;
 
   }
   }
 
   .white-board {
-    /* display: none; */
     position: absolute;
-    top: 12px;
+    top: 10px;
     z-index: 3;
     pointer-events: none;
     @media (min-width: 768px) {
    
-  top: 20px;
+  top: 18px;
 
   }
   }
 
   .game-grid {
-    /* position: relative; */
-    /* position: absolute; */
-
     z-index: 2;
-    @media (min-width: 768px) {
-   
-  
-
-    }
   }
 
   .marker-container {
     @media (min-width: 1200px) {
-    /* position: absolute; */
-    /* top: -25px;  */
-    /* height: 40px; */
-    /* width: auto; */
-    /* pointer-events: none; */
-    /* z-index: 5; */
+      width: 100px;
+      height: 40px;
+    position: absolute;
+    top: -20px; 
+    z-index: 5;
+    left: 50%;
     }
   }
 
 
   .marker {
- 
-
     @media (min-width: 1200px) {
-      /* pointer-events: none; */
-      /* position: absolute; */
-      /* transition: left 0.2s ease-in-out; */
+      position: absolute;
+      transition: left 0.2s ease-in-out;
+      height: 100%; 
     }
   }
 

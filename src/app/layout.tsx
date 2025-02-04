@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './styles/global'; // Import the global styles
 import { theme } from './styles/theme'; // Your theme with the colors
 import { Space_Grotesk } from "next/font/google";
+import Head from './head';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -18,6 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={spaceGrotesk.className}>
+      <Head></Head>
       <body>
         <ThemeProvider theme={theme}>
           <GlobalStyle /> 

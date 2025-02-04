@@ -99,8 +99,12 @@ export const MenuButton = styled.button`
     color: ${({ theme }) => theme.colors.white};
   }
 
-  &:hover {
+  @media(hover: hover) and (pointer: fine) {
+    &:hover {
     border-color: ${({ theme }) => theme.colors.darkPurple};
     box-shadow: 0px 10px 0px ${({ theme }) => theme.colors.darkPurple};
   }
+  }
+
+
 `;

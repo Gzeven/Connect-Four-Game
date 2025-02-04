@@ -74,10 +74,14 @@ export const CheckButton = styled.button<ButtonProps>`
     transition: all 0.6s ease;
   }
 
-  &:hover {
+  @media(hover: hover) and (pointer: fine) {
+    &:hover {
     svg circle:first-of-type,
     svg circle:nth-of-type(2) {
       fill: ${({ theme, $hoverColor }) => theme.colors[$hoverColor]};
     }
+  }
+
+
   }
 `;

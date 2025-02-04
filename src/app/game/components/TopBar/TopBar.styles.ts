@@ -37,10 +37,12 @@ export const Button = styled.button`
   cursor: pointer;
   transition: all 0.6s ease;
 
-  &:hover { 
+  @media(hover: hover) and (pointer: fine) {
+    &:hover { 
    background-color: ${({ theme }) => theme.colors.red};
-
 }
+  }
+
 
 @media (min-width: 768px) {
   width: auto;

@@ -146,6 +146,3 @@ const Board: React.FC<BoardProps> = ({ board, dropCoin, winningCells, currentWin
 export default Board;
 
 
-
-
-

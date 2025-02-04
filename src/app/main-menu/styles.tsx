@@ -80,10 +80,13 @@ export const Button = styled.button<ButtonProps>`
   transition: all 0.6s ease;
   height: 4.5rem;
 
-  &:hover {
+  @media(hover: hover) and (pointer: fine) {
+    &:hover {
     border-color: ${({ theme, $hoverColor }) => theme.colors[$hoverColor]};
     box-shadow: 0px 10px 0px ${({ theme, $hoverColor }) => theme.colors[$hoverColor]};
   }
+  }
+
 
   span {
     flex: 1; 
@@ -162,12 +165,13 @@ export const DifficultyButton = styled.button<{ $bgColor: string; $hoverColor: s
   cursor: pointer;
   transition: all 0.6s ease;
 
-  &:hover {
-
-  
+  @media(hover: hover) and (pointer: fine) {
+    &:hover {
     border-color: ${({ theme, $hoverColor }) => theme.colors[$hoverColor]};
     box-shadow: 0px 10px 0px ${({ theme, $hoverColor }) => theme.colors[$hoverColor]};
   }
+  }
+
 `;
 
 export const CancelButton = styled.button<{ $bgColor: string; $hoverColor: string }>`
@@ -187,8 +191,12 @@ export const CancelButton = styled.button<{ $bgColor: string; $hoverColor: strin
   cursor: pointer;
   transition: all 0.6s ease;
 
-  &:hover {
+  @media(hover: hover) and (pointer: fine) {
+    &:hover {
     border-color: ${({ theme, $hoverColor }) => theme.colors[$hoverColor]};
     box-shadow: 0px 10px 0px ${({ theme, $hoverColor }) => theme.colors[$hoverColor]};
   }
+  }
+
+
 `;

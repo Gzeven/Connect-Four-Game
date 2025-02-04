@@ -52,11 +52,13 @@ export const Button = styled.button<ButtonProps>`
   /* height: 72px; */
   /* cursor: pointer; */
   /* transition: all 0.3s ease; */
-
-  &:hover {
+  @media(hover: hover) and (pointer: fine) {
+    &:hover {
     /* border-color: ${({ theme, $hoverColor }) => theme.colors[$hoverColor]}; */
     /* box-shadow: 0px 10px 0px ${({ theme, $hoverColor }) => theme.colors[$hoverColor]}; */
   }
+  }
+
 
   img {
     /* width: 64px; */

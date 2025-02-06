@@ -122,7 +122,7 @@ export const BoardContainer = styled.div`
       width: 100px;
       height: 40px;
     position: absolute;
-    top: -20px; 
+    top: -18px; 
     z-index: 5;
     left: 50%;
     }
@@ -133,7 +133,8 @@ export const BoardContainer = styled.div`
     @media (min-width: 1200px) {
       position: absolute;
       transition: left 0.2s ease-in-out;
-      height: 100%; 
+      /* height: 100%;  */
+      
     }
   }
 

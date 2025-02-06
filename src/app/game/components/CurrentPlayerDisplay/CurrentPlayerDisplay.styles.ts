@@ -113,4 +113,10 @@ export const Button = styled.button`
   font-weight: 700;
   font-size: 1rem;
   text-transform: uppercase;
+  transition: all 0.6s ease;
+  @media(hover: hover) and (pointer: fine) {
+    &:hover {
+    background-color: ${({ theme }) => theme.colors.red};
+  }
+}
 `;

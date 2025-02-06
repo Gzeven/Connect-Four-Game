@@ -24,7 +24,7 @@ export default function MainMenu() {
     <MenuContainer>
     
       <Logo>
-        <Image src={logo} alt="Connect Four Logo" />
+        <Image src={logo} alt="Connect Four Logo" priority />
       </Logo>
       <ButtonContainer>
       <Button

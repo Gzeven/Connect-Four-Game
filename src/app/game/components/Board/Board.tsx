@@ -88,7 +88,7 @@ const Board: React.FC<BoardProps> = ({ board, dropCoin, winningCells, currentWin
             className="marker"
             style={{
               left: markerPosition, 
-            }}
+            }}  
           />
         </div>
       )}
@@ -97,6 +97,7 @@ const Board: React.FC<BoardProps> = ({ board, dropCoin, winningCells, currentWin
         src={isLargeScreen ? blackBoardLarge : blackBoard}
         alt="Black Board Layer"
         className="black-board"
+        priority
       />
 
       <div

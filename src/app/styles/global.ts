@@ -58,7 +58,7 @@ export const GlobalStyle = createGlobalStyle`
 
   /* Accessibility focus outline */
   :focus {
-    outline: 2px solid ${({ theme }) => theme.colors.purple};
+    outline: 2px solid ${({ theme }) => theme.colors.white};
     outline-offset: 2px;
   }
 `;
